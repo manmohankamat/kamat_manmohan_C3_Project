@@ -42,6 +42,7 @@ class RestaurantTest {
     //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     @Test
+
     public void order_value_should_get_cumulative_total_when_collection_of_items_selected(){
         restaurantCreation();
         spoof = restaurant.getMenu();
@@ -49,6 +50,7 @@ class RestaurantTest {
     }
 
     @Test
+
     public void order_value_should_reduce_cumulative_total_when_an_item_removed(){
         restaurantCreation();
         spoof = restaurant.getMenu();
@@ -58,6 +60,7 @@ class RestaurantTest {
         assertEquals(total-afterTotal,restaurant.getOrderValue(spoof));
     }
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>MENU<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
     @Test
     public void adding_item_to_menu_should_increase_menu_size_by_1(){
         LocalTime openingTime = LocalTime.parse("10:30:00");
